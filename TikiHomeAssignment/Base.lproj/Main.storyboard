@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TikiHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TikiHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,9 +109,14 @@
                                     <constraint firstItem="7Bw-mG-tLx" firstAttribute="leading" secondItem="0cq-iG-17Y" secondAttribute="leading" constant="15" id="usW-9X-MbB"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pfE-FZ-GBE">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pfE-FZ-GBE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Pl-rR-5vx"/>
+                            <constraint firstItem="pfE-FZ-GBE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OwP-CH-yGm"/>
                             <constraint firstItem="0cq-iG-17Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U2S-Re-M5E"/>
                             <constraint firstItem="0cq-iG-17Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kj3-Cc-UeY"/>
                             <constraint firstItem="0cq-iG-17Y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vHR-h8-Tbt"/>
@@ -120,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="keywordCollectionView" destination="ld4-9a-njg" id="P09-BC-3KK"/>
+                        <outlet property="loadingIndicator" destination="pfE-FZ-GBE" id="jK5-6G-7Hc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

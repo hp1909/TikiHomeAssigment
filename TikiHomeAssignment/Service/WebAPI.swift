@@ -8,9 +8,10 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 protocol WebAPIProtocol {
-  func request(httpRequest: HTTPRequestModel, completion: @escaping (Data?) -> Void)
+  func request(httpRequest: HTTPRequestModel) -> Observable<Data?>
 }
 
 class WebAPI: WebAPIProtocol {
@@ -18,20 +19,24 @@ class WebAPI: WebAPIProtocol {
   
   fileprivate init() {}
   
-  func request(httpRequest: HTTPRequestModel, completion: @escaping (Data?) -> Void) {
-    Alamofire.request(httpRequest.url, method: httpRequest.method)
-      .validate()
-      .responseJSON { response in
-        switch response.result {
-        case .success(_):
-          completion(response.data)
-          return
-
-        case .failure(let error):
-          print("Error: \(error)")
-          completion(nil)
-          return
-        }
+  func request(httpRequest: HTTPRequestModel) -> Observable<Data?> {
+    return Observable.create { observer in
+      let request = Alamofire.SessionManager.default.request(httpRequest.url, method: httpRequest.method)
+        .validate()
+        .responseJSON { response in
+          switch response.result {
+          case .success(_):
+            observer.onNext(response.data)
+            
+          case .failure(let error):
+            print("Error: \(error)")
+            observer.onError(error)
+          }
+      }
+      
+      return Disposables.create {
+        request.cancel()
+      }
     }
   }
 }

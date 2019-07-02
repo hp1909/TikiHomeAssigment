@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class Service {
   var webAPI: WebAPIProtocol
@@ -15,23 +16,16 @@ class Service {
     self.webAPI = webAPI
   }
   
-  func getKeywords(completion: @escaping ([Keyword]?) -> Void) {
+  func getKeywords() -> Observable<[Keyword]?> {
     let httpRequest = HTTPRequestModel(url: Constants.KEYWORDS_URL)
-    self.webAPI.request(httpRequest: httpRequest) { data in
-      guard let rawData = data else {
-        completion(nil)
-        return
+    return self.webAPI.request(httpRequest: httpRequest)
+      .flatMap{ (data) -> Observable<[Keyword]?> in
+        guard let rawData = data else {
+          return Observable.just(nil)
+        }
+        
+        let result = ModelParser<Keywords>.parse(data: rawData)
+        return Observable.just(result?.keywords)
       }
-      
-      let decoder = JSONDecoder()
-
-      do {
-        let result = try decoder.decode(Keywords.self, from: rawData)
-        completion(result.keywords)
-      } catch {
-        completion(nil)
-        print("unexpected error")
-      }
-    }
   }
 }

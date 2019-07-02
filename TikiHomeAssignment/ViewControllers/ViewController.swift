@@ -7,20 +7,54 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   @IBOutlet weak var keywordCollectionView: UICollectionView!
+  @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+  
   var keywords: [Keyword]? = nil
-  let service: Service = Service(webAPI: WebAPI.shared)
+  var viewModel: ViewModel?
+  let disposeBag = DisposeBag()
+  
+  private let viewWillAppearSubject = PublishSubject<Void>()
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.viewWillAppearSubject.onNext(Void())
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    service.getKeywords(completion: { keywords in
-      if let keywords = keywords {
-        self.keywords = keywords
-        self.keywordCollectionView.reloadData()
+    self.bindViewModel()
+  }
+  
+  func viewWillAppearObservable() -> Observable<Void> {
+    return self.viewWillAppearSubject.asObservable()
+  }
+  
+  func bindViewModel() {
+    let input = ViewModel.Input(viewWillAppearObservable: self.viewWillAppearObservable())
+    let output = self.viewModel?.transform(input: input)
+    output?.isLoadingObservable
+      .map { !$0 }
+      .bind(to: self.loadingIndicator.rx.isHidden)
+      .disposed(by: self.disposeBag)
+    
+    output?.isLoadingObservable
+      .bind(to: self.loadingIndicator.rx.isAnimating)
+      .disposed(by: self.disposeBag)
+    
+    output?.keywordsObservable.subscribe(onNext: { [weak self] data in
+      guard let `self` = self else {
+        return
       }
+      
+      self.keywords = data
+      self.keywordCollectionView.reloadData()
     })
+    .disposed(by: self.disposeBag)
   }
   
   // MARK: Setup Keywords Collection View
@@ -45,9 +79,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     guard let text = self.keywords?[indexPath.row].keyword else {
       return collectionView.frame.size
     }
+    
     let estimatedWidth = text.balanceLines()
     let actualWidth = estimatedWidth > Constants.MIN_KEYWORD_CELL_WIDTH ? estimatedWidth : Constants.MIN_KEYWORD_CELL_WIDTH
-    print("Actual width item \(indexPath.row) is \(estimatedWidth)")
+
     return CGSize(width: actualWidth, height: 200.0)
   }
 }

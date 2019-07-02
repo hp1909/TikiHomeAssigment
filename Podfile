@@ -7,4 +7,7 @@ target 'TikiHomeAssignment' do
 
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 3.5'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
 end
