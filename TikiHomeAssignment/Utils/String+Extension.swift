@@ -35,8 +35,7 @@ extension String {
     }
     preferWidth /= 0.9
     preferHeight = self.height(withConstrainedWidth: preferWidth)
-    print("Prefer width: \(preferWidth) and preferHeight: \(preferHeight)")
-    return preferWidth + 32
+    return preferWidth
   }
 }
 
