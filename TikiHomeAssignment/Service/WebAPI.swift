@@ -30,7 +30,7 @@ class WebAPI: WebAPIProtocol {
             
           case .failure(let error):
             print("Error: \(error)")
-            observer.onError(error)
+            observer.onNext(nil)
           }
       }
       

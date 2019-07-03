@@ -23,6 +23,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ Khóa Hot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-mG-tLx">
                                         <rect key="frame" x="15" y="10" width="384" height="40"/>
+                                        <accessibility key="accessibilityConfiguration" label="keywordLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Yaa-LW-BOD"/>
                                         </constraints>
@@ -97,13 +98,23 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="auv-EG-OtK"/>
                                         </connections>
                                     </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izz-pc-kCF">
+                                        <rect key="frame" x="99.5" y="132" width="215.5" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" label="noDataLabel"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.12832683459090399" green="0.61063143682559429" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="izz-pc-kCF" firstAttribute="centerY" secondItem="ld4-9a-njg" secondAttribute="centerY" id="38A-Op-82a"/>
                                     <constraint firstItem="ld4-9a-njg" firstAttribute="top" secondItem="7Bw-mG-tLx" secondAttribute="bottom" id="AL1-sd-CUb"/>
                                     <constraint firstItem="7Bw-mG-tLx" firstAttribute="top" secondItem="0cq-iG-17Y" secondAttribute="top" constant="10" id="Ehn-Ar-INH"/>
                                     <constraint firstAttribute="trailing" secondItem="ld4-9a-njg" secondAttribute="trailing" constant="5" id="F97-Mi-b9b"/>
                                     <constraint firstAttribute="trailing" secondItem="7Bw-mG-tLx" secondAttribute="trailing" constant="15" id="XHh-ei-lYT"/>
+                                    <constraint firstItem="izz-pc-kCF" firstAttribute="centerX" secondItem="ld4-9a-njg" secondAttribute="centerX" id="bZj-nV-b3Z"/>
                                     <constraint firstItem="ld4-9a-njg" firstAttribute="leading" secondItem="0cq-iG-17Y" secondAttribute="leading" constant="5" id="hmV-e0-u1l"/>
                                     <constraint firstAttribute="bottom" secondItem="ld4-9a-njg" secondAttribute="bottom" constant="10" id="iWJ-aT-oGx"/>
                                     <constraint firstItem="7Bw-mG-tLx" firstAttribute="leading" secondItem="0cq-iG-17Y" secondAttribute="leading" constant="15" id="usW-9X-MbB"/>
@@ -126,6 +137,7 @@
                     <connections>
                         <outlet property="keywordCollectionView" destination="ld4-9a-njg" id="P09-BC-3KK"/>
                         <outlet property="loadingIndicator" destination="pfE-FZ-GBE" id="jK5-6G-7Hc"/>
+                        <outlet property="noDataLabel" destination="izz-pc-kCF" id="lRD-Xf-F8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

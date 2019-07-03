@@ -10,7 +10,11 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class Service {
+protocol ServiceProtocol {
+  func getKeywords() -> Observable<[Keyword]?>
+}
+
+class Service: ServiceProtocol {
   var webAPI: WebAPIProtocol
   init(webAPI: WebAPIProtocol) {
     self.webAPI = webAPI

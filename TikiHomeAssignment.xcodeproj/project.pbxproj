@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7089870461418D67373EE637 /* Pods_TikiHomeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9ED20222CB988C000CE094 /* Pods_TikiHomeAssignmentTests.framework */; };
 		BC1719E822CA24FE00A6DB30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1719E722CA24FE00A6DB30 /* AppDelegate.swift */; };
 		BC1719EA22CA24FE00A6DB30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1719E922CA24FE00A6DB30 /* ViewController.swift */; };
 		BC1719ED22CA24FE00A6DB30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1719EB22CA24FE00A6DB30 /* Main.storyboard */; };
@@ -17,6 +18,20 @@
 		BC45761122CA37DC00A8E625 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45761022CA37DC00A8E625 /* Constants.swift */; };
 		BC45761322CA38F200A8E625 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45761222CA38F200A8E625 /* Service.swift */; };
 		BC45761622CA397700A8E625 /* HTTPRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45761522CA397700A8E625 /* HTTPRequestModel.swift */; };
+		BC6EFB7022CB9BE9005E9A79 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EFB6F22CB9BE9005E9A79 /* ViewModelTests.swift */; };
+		BC6EFB7322CB9E4B005E9A79 /* keywords_success.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB7222CB9E4B005E9A79 /* keywords_success.json */; };
+		BC6EFB7522CB9E61005E9A79 /* keywords_fail.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB7422CB9E61005E9A79 /* keywords_fail.json */; };
+		BC6EFB7822CBCC10005E9A79 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EFB7722CBCC10005E9A79 /* ServiceTests.swift */; };
+		BC6EFB7A22CBCCAB005E9A79 /* WebAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EFB7922CBCCAB005E9A79 /* WebAPITests.swift */; };
+		BC6EFB8922CC3562005E9A79 /* keywords_success.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB7222CB9E4B005E9A79 /* keywords_success.json */; };
+		BC6EFB8A22CC3562005E9A79 /* keywords_fail.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB7422CB9E61005E9A79 /* keywords_fail.json */; };
+		BC6EFB8C22CC36DB005E9A79 /* KIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6EFB8B22CC36DB005E9A79 /* KIF.framework */; };
+		BC6EFB8F22CC3861005E9A79 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EFB8E22CC3861005E9A79 /* MainViewTests.swift */; };
+		BC6EFB9322CC3D9E005E9A79 /* keywords_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB9222CC3D9E005E9A79 /* keywords_empty.json */; };
+		BC6EFB9422CC3E03005E9A79 /* keywords_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB9222CC3D9E005E9A79 /* keywords_empty.json */; };
+		BC6EFB9722CC4683005E9A79 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EFB9622CC4683005E9A79 /* TestUtils.swift */; };
+		BC6EFB9822CC481E005E9A79 /* TestUtils.swift in Resources */ = {isa = PBXBuildFile; fileRef = BC6EFB9622CC4683005E9A79 /* TestUtils.swift */; };
+		BC6EFB9A22CC48AF005E9A79 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EFB9922CC48AF005E9A79 /* TestUtils.swift */; };
 		BCAB918C22CA3FE1001DF07A /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB918B22CA3FE1001DF07A /* WebAPI.swift */; };
 		BCAB919222CA63BE001DF07A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB919122CA63BE001DF07A /* UIImageView+Extension.swift */; };
 		BCAB919422CA6A26001DF07A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB919322CA6A25001DF07A /* UIColor+Extension.swift */; };
@@ -24,11 +39,36 @@
 		BCE2EBC322CB0BDC0005FC12 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE2EBC222CB0BDC0005FC12 /* ViewModel.swift */; };
 		BCE2EBC522CB16DB0005FC12 /* ModelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE2EBC422CB16DB0005FC12 /* ModelParser.swift */; };
 		CAC1F23F2B84CA705276643C /* Pods_TikiHomeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E92451F284146A3AD53638 /* Pods_TikiHomeAssignment.framework */; };
+		F4215402213BC251E70F8DBD /* Pods_TikiHomeAssignment_TikiHomeAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEE9F5C4B4D66627D3C69C6 /* Pods_TikiHomeAssignment_TikiHomeAssignmentUITests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BC6EFB6822CB9B69005E9A79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC1719DC22CA24FE00A6DB30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1719E322CA24FE00A6DB30;
+			remoteInfo = TikiHomeAssignment;
+		};
+		BC6EFB8422CC3555005E9A79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC1719DC22CA24FE00A6DB30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1719E322CA24FE00A6DB30;
+			remoteInfo = TikiHomeAssignment;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		07BB51B2706912B40A223E4B /* Pods_TikiHomeAssignment_TikiHomeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiHomeAssignment_TikiHomeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8A52208F29A69F1BB6A1AF /* Pods-TikiHomeAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignmentTests/Pods-TikiHomeAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65D0405EFD15023D312781FE /* Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71E06A811D73565D0B3C5119 /* Pods-TikiHomeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignment/Pods-TikiHomeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		937E845F8B9C84E6B4227E4B /* Pods-TikiHomeAssignment-TikiHomeAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignment-TikiHomeAssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignment-TikiHomeAssignmentTests/Pods-TikiHomeAssignment-TikiHomeAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2CE78BF699D869DFD88C618 /* Pods-TikiHomeAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignmentTests/Pods-TikiHomeAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC084045AF379301F3A70634 /* Pods-TikiHomeAssignment-TikiHomeAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignment-TikiHomeAssignmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignment-TikiHomeAssignmentTests/Pods-TikiHomeAssignment-TikiHomeAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		B02F168C0A191E4184874488 /* Pods-TikiHomeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignment/Pods-TikiHomeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		B6C37BFF8D8E9877B383991F /* Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC1719E422CA24FE00A6DB30 /* TikiHomeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikiHomeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1719E722CA24FE00A6DB30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC1719E922CA24FE00A6DB30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,12 +81,32 @@
 		BC45761022CA37DC00A8E625 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC45761222CA38F200A8E625 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		BC45761522CA397700A8E625 /* HTTPRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestModel.swift; sourceTree = "<group>"; };
+		BC6EFB6322CB9B69005E9A79 /* TikiHomeAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikiHomeAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6EFB6722CB9B69005E9A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6EFB6F22CB9BE9005E9A79 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		BC6EFB7222CB9E4B005E9A79 /* keywords_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = keywords_success.json; sourceTree = "<group>"; };
+		BC6EFB7422CB9E61005E9A79 /* keywords_fail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = keywords_fail.json; sourceTree = "<group>"; };
+		BC6EFB7722CBCC10005E9A79 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
+		BC6EFB7922CBCCAB005E9A79 /* WebAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPITests.swift; sourceTree = "<group>"; };
+		BC6EFB7F22CC3555005E9A79 /* TikiHomeAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikiHomeAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6EFB8322CC3555005E9A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6EFB8B22CC36DB005E9A79 /* KIF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KIF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6EFB8D22CC3861005E9A79 /* TikiHomeAssignmentUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TikiHomeAssignmentUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC6EFB8E22CC3861005E9A79 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
+		BC6EFB9222CC3D9E005E9A79 /* keywords_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = keywords_empty.json; sourceTree = "<group>"; };
+		BC6EFB9622CC4683005E9A79 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		BC6EFB9922CC48AF005E9A79 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		BC9ED1FE22CB9479000CE094 /* Pods_TikiHomeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TikiHomeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9ED20022CB978C000CE094 /* Pods_TikiHomeAssignment_TikiHomeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TikiHomeAssignment_TikiHomeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9ED20222CB988C000CE094 /* Pods_TikiHomeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TikiHomeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAB918B22CA3FE1001DF07A /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 		BCAB919122CA63BE001DF07A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		BCAB919322CA6A25001DF07A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BCAB919522CA74BA001DF07A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BCE2EBC222CB0BDC0005FC12 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BCE2EBC422CB16DB0005FC12 /* ModelParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelParser.swift; sourceTree = "<group>"; };
+		C1CE8A539865C3BF4B26B41A /* Pods_TikiHomeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiHomeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEE9F5C4B4D66627D3C69C6 /* Pods_TikiHomeAssignment_TikiHomeAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiHomeAssignment_TikiHomeAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E92451F284146A3AD53638 /* Pods_TikiHomeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiHomeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,6 +119,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC6EFB6022CB9B69005E9A79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7089870461418D67373EE637 /* Pods_TikiHomeAssignmentTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6EFB7C22CC3555005E9A79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6EFB8C22CC36DB005E9A79 /* KIF.framework in Frameworks */,
+				F4215402213BC251E70F8DBD /* Pods_TikiHomeAssignment_TikiHomeAssignmentUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +144,12 @@
 			children = (
 				B02F168C0A191E4184874488 /* Pods-TikiHomeAssignment.debug.xcconfig */,
 				71E06A811D73565D0B3C5119 /* Pods-TikiHomeAssignment.release.xcconfig */,
+				937E845F8B9C84E6B4227E4B /* Pods-TikiHomeAssignment-TikiHomeAssignmentTests.debug.xcconfig */,
+				AC084045AF379301F3A70634 /* Pods-TikiHomeAssignment-TikiHomeAssignmentTests.release.xcconfig */,
+				5B8A52208F29A69F1BB6A1AF /* Pods-TikiHomeAssignmentTests.debug.xcconfig */,
+				A2CE78BF699D869DFD88C618 /* Pods-TikiHomeAssignmentTests.release.xcconfig */,
+				65D0405EFD15023D312781FE /* Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.debug.xcconfig */,
+				B6C37BFF8D8E9877B383991F /* Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -75,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				BC1719E622CA24FE00A6DB30 /* TikiHomeAssignment */,
+				BC6EFB6422CB9B69005E9A79 /* TikiHomeAssignmentTests */,
+				BC6EFB8022CC3555005E9A79 /* TikiHomeAssignmentUITests */,
 				BC1719E522CA24FE00A6DB30 /* Products */,
 				6CE25DF04CF60759AC1E9F6B /* Pods */,
 				CA70945BCC0F186C19153B9D /* Frameworks */,
@@ -85,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				BC1719E422CA24FE00A6DB30 /* TikiHomeAssignment.app */,
+				BC6EFB6322CB9B69005E9A79 /* TikiHomeAssignmentTests.xctest */,
+				BC6EFB7F22CC3555005E9A79 /* TikiHomeAssignmentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,10 +240,75 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		BC6EFB6422CB9B69005E9A79 /* TikiHomeAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFB9522CC466E005E9A79 /* Utils */,
+				BC6EFB7622CBCBF9005E9A79 /* Others */,
+				BC6EFB7122CB9E30005E9A79 /* Fixtures */,
+				BC6EFB6E22CB9BD8005E9A79 /* ViewModels */,
+				BC6EFB6722CB9B69005E9A79 /* Info.plist */,
+			);
+			path = TikiHomeAssignmentTests;
+			sourceTree = "<group>";
+		};
+		BC6EFB6E22CB9BD8005E9A79 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFB6F22CB9BE9005E9A79 /* ViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BC6EFB7122CB9E30005E9A79 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFB7222CB9E4B005E9A79 /* keywords_success.json */,
+				BC6EFB7422CB9E61005E9A79 /* keywords_fail.json */,
+				BC6EFB9222CC3D9E005E9A79 /* keywords_empty.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		BC6EFB7622CBCBF9005E9A79 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFB7722CBCC10005E9A79 /* ServiceTests.swift */,
+				BC6EFB7922CBCCAB005E9A79 /* WebAPITests.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		BC6EFB8022CC3555005E9A79 /* TikiHomeAssignmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFB8322CC3555005E9A79 /* Info.plist */,
+				BC6EFB8E22CC3861005E9A79 /* MainViewTests.swift */,
+				BC6EFB8D22CC3861005E9A79 /* TikiHomeAssignmentUITests-Bridging-Header.h */,
+				BC6EFB9922CC48AF005E9A79 /* TestUtils.swift */,
+			);
+			path = TikiHomeAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		BC6EFB9522CC466E005E9A79 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFB9622CC4683005E9A79 /* TestUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CA70945BCC0F186C19153B9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EFB8B22CC36DB005E9A79 /* KIF.framework */,
+				BC9ED20222CB988C000CE094 /* Pods_TikiHomeAssignmentTests.framework */,
+				BC9ED20022CB978C000CE094 /* Pods_TikiHomeAssignment_TikiHomeAssignmentTests.framework */,
+				BC9ED1FE22CB9479000CE094 /* Pods_TikiHomeAssignmentTests.framework */,
 				E3E92451F284146A3AD53638 /* Pods_TikiHomeAssignment.framework */,
+				07BB51B2706912B40A223E4B /* Pods_TikiHomeAssignment_TikiHomeAssignmentTests.framework */,
+				C1CE8A539865C3BF4B26B41A /* Pods_TikiHomeAssignmentTests.framework */,
+				DBEE9F5C4B4D66627D3C69C6 /* Pods_TikiHomeAssignment_TikiHomeAssignmentUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,6 +335,46 @@
 			productReference = BC1719E422CA24FE00A6DB30 /* TikiHomeAssignment.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BC6EFB6222CB9B69005E9A79 /* TikiHomeAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC6EFB6A22CB9B69005E9A79 /* Build configuration list for PBXNativeTarget "TikiHomeAssignmentTests" */;
+			buildPhases = (
+				09A016F08677B8472C590F04 /* [CP] Check Pods Manifest.lock */,
+				BC6EFB5F22CB9B69005E9A79 /* Sources */,
+				BC6EFB6022CB9B69005E9A79 /* Frameworks */,
+				BC6EFB6122CB9B69005E9A79 /* Resources */,
+				ECE94B7946867488E959DBE8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC6EFB6922CB9B69005E9A79 /* PBXTargetDependency */,
+			);
+			name = TikiHomeAssignmentTests;
+			productName = TikiHomeAssignmentTests;
+			productReference = BC6EFB6322CB9B69005E9A79 /* TikiHomeAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC6EFB7E22CC3555005E9A79 /* TikiHomeAssignmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC6EFB8622CC3555005E9A79 /* Build configuration list for PBXNativeTarget "TikiHomeAssignmentUITests" */;
+			buildPhases = (
+				7B8042846CE17E2D74E0B6CA /* [CP] Check Pods Manifest.lock */,
+				BC6EFB7B22CC3555005E9A79 /* Sources */,
+				BC6EFB7C22CC3555005E9A79 /* Frameworks */,
+				BC6EFB7D22CC3555005E9A79 /* Resources */,
+				A00422F3B294AB50CB3D8FFB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC6EFB8522CC3555005E9A79 /* PBXTargetDependency */,
+			);
+			name = TikiHomeAssignmentUITests;
+			productName = TikiHomeAssignmentUITests;
+			productReference = BC6EFB7F22CC3555005E9A79 /* TikiHomeAssignmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,6 +387,15 @@
 				TargetAttributes = {
 					BC1719E322CA24FE00A6DB30 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					BC6EFB6222CB9B69005E9A79 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BC1719E322CA24FE00A6DB30;
+					};
+					BC6EFB7E22CC3555005E9A79 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						TestTargetID = BC1719E322CA24FE00A6DB30;
 					};
 				};
 			};
@@ -212,6 +413,8 @@
 			projectRoot = "";
 			targets = (
 				BC1719E322CA24FE00A6DB30 /* TikiHomeAssignment */,
+				BC6EFB6222CB9B69005E9A79 /* TikiHomeAssignmentTests */,
+				BC6EFB7E22CC3555005E9A79 /* TikiHomeAssignmentUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +427,27 @@
 				BC1719F222CA24FE00A6DB30 /* LaunchScreen.storyboard in Resources */,
 				BC1719EF22CA24FE00A6DB30 /* Assets.xcassets in Resources */,
 				BC1719ED22CA24FE00A6DB30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6EFB6122CB9B69005E9A79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6EFB7322CB9E4B005E9A79 /* keywords_success.json in Resources */,
+				BC6EFB7522CB9E61005E9A79 /* keywords_fail.json in Resources */,
+				BC6EFB9322CC3D9E005E9A79 /* keywords_empty.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6EFB7D22CC3555005E9A79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6EFB9822CC481E005E9A79 /* TestUtils.swift in Resources */,
+				BC6EFB9422CC3E03005E9A79 /* keywords_empty.json in Resources */,
+				BC6EFB8922CC3562005E9A79 /* keywords_success.json in Resources */,
+				BC6EFB8A22CC3562005E9A79 /* keywords_fail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,10 +465,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TikiHomeAssignment/Pods-TikiHomeAssignment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -253,15 +475,101 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TikiHomeAssignment/Pods-TikiHomeAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		09A016F08677B8472C590F04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TikiHomeAssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B8042846CE17E2D74E0B6CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A00422F3B294AB50CB3D8FFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests/Pods-TikiHomeAssignment-TikiHomeAssignmentUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFBC30FFBB73DC2698BA3DFD /* [CP] Check Pods Manifest.lock */ = {
@@ -284,6 +592,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE94B7946867488E959DBE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TikiHomeAssignmentTests/Pods-TikiHomeAssignmentTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TikiHomeAssignmentTests/Pods-TikiHomeAssignmentTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -309,7 +649,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC6EFB5F22CB9B69005E9A79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6EFB7022CB9BE9005E9A79 /* ViewModelTests.swift in Sources */,
+				BC6EFB7822CBCC10005E9A79 /* ServiceTests.swift in Sources */,
+				BC6EFB7A22CBCCAB005E9A79 /* WebAPITests.swift in Sources */,
+				BC6EFB9722CC4683005E9A79 /* TestUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6EFB7B22CC3555005E9A79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6EFB8F22CC3861005E9A79 /* MainViewTests.swift in Sources */,
+				BC6EFB9A22CC48AF005E9A79 /* TestUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC6EFB6922CB9B69005E9A79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1719E322CA24FE00A6DB30 /* TikiHomeAssignment */;
+			targetProxy = BC6EFB6822CB9B69005E9A79 /* PBXContainerItemProxy */;
+		};
+		BC6EFB8522CC3555005E9A79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1719E322CA24FE00A6DB30 /* TikiHomeAssignment */;
+			targetProxy = BC6EFB8422CC3555005E9A79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC1719EB22CA24FE00A6DB30 /* Main.storyboard */ = {
@@ -389,6 +762,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -443,6 +817,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -461,7 +836,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = phuc.hoang.TikiHomeAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -480,8 +855,93 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = phuc.hoang.TikiHomeAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC6EFB6B22CB9B69005E9A79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8A52208F29A69F1BB6A1AF /* Pods-TikiHomeAssignmentTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TikiHomeAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phuc.hoang.TikiHomeAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikiHomeAssignment.app/TikiHomeAssignment";
+			};
+			name = Debug;
+		};
+		BC6EFB6C22CB9B69005E9A79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2CE78BF699D869DFD88C618 /* Pods-TikiHomeAssignmentTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TikiHomeAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phuc.hoang.TikiHomeAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikiHomeAssignment.app/TikiHomeAssignment";
+			};
+			name = Release;
+		};
+		BC6EFB8722CC3555005E9A79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D0405EFD15023D312781FE /* Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TikiHomeAssignmentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phuc.hoang.TikiHomeAssignmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TikiHomeAssignmentUITests/TikiHomeAssignmentUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikiHomeAssignment.app/TikiHomeAssignment";
+			};
+			name = Debug;
+		};
+		BC6EFB8822CC3555005E9A79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C37BFF8D8E9877B383991F /* Pods-TikiHomeAssignment-TikiHomeAssignmentUITests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TikiHomeAssignmentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phuc.hoang.TikiHomeAssignmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TikiHomeAssignmentUITests/TikiHomeAssignmentUITests-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikiHomeAssignment.app/TikiHomeAssignment";
 			};
 			name = Release;
 		};
@@ -502,6 +962,24 @@
 			buildConfigurations = (
 				BC1719F722CA24FE00A6DB30 /* Debug */,
 				BC1719F822CA24FE00A6DB30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC6EFB6A22CB9B69005E9A79 /* Build configuration list for PBXNativeTarget "TikiHomeAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC6EFB6B22CB9B69005E9A79 /* Debug */,
+				BC6EFB6C22CB9B69005E9A79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC6EFB8622CC3555005E9A79 /* Build configuration list for PBXNativeTarget "TikiHomeAssignmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC6EFB8722CC3555005E9A79 /* Debug */,
+				BC6EFB8822CC3555005E9A79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

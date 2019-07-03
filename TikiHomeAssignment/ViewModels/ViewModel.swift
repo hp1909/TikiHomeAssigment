@@ -13,50 +13,60 @@ import RxCocoa
 protocol ViewModelProtocol: class {
   associatedtype Input
   associatedtype Output
+  
+  var input : Input { get }
+  var output : Output { get }
 }
 
 class ViewModel: ViewModelProtocol {
+  var input: ViewModel.Input
+  var output: ViewModel.Output
+  
   struct Input {
-    let viewWillAppearObservable: Observable<Void>
+    let viewWillAppearObservable: AnyObserver<Void>
   }
   
   struct Output {
     let isLoadingObservable: Observable<Bool>
     let keywordsObservable: Observable<[Keyword]>
+    let noDataObservable: Observable<Bool>
   }
   
-  var service: Service?
-  let disposeBag = DisposeBag()
-  let keywordSubject = PublishSubject<[Keyword]>()
-  let isLoadingSubject = PublishSubject<Bool>()
+  var service: ServiceProtocol?
   
-  init(service: Service) {
+  init(service: ServiceProtocol) {
     self.service = service
-  }
-  
-  func transform(input: Input) -> Output {
-    input.viewWillAppearObservable.subscribe(onNext: { [weak self] (_) in
-      guard let `self` = self else {
-        return
-      }
+    
+    let viewWillAppearSubject = PublishSubject<Void>()
+    let keywordSubject = PublishSubject<[Keyword]>()
+    let isLoadingSubject = PublishSubject<Bool>()
+    let noDataSubject = PublishSubject<Bool>()
+    let disposeBag = DisposeBag()
+    
+    viewWillAppearSubject.subscribe(onNext: { (_) in
+      isLoadingSubject.onNext(true)
+      noDataSubject.onNext(false)
       
-      self.isLoadingSubject.onNext(true)
-      
-      self.service!.getKeywords()
+      service.getKeywords()
         .observeOn(MainScheduler.instance)
-        .subscribe(onNext: { [weak self] (keywords) in
-          self?.isLoadingSubject.onNext(false)
+        .subscribe(onNext: { (keywords) in
+          isLoadingSubject.onNext(false)
           guard let keywords = keywords else {
             return
           }
           
-          self?.keywordSubject.onNext(keywords)
+          if keywords.isEmpty {
+            noDataSubject.onNext(true)
+          }
+          
+          keywordSubject.onNext(keywords)
         })
-        .disposed(by: self.disposeBag)
-    })
-    .disposed(by: self.disposeBag)
+        .disposed(by: disposeBag)
+    }).disposed(by: disposeBag)
     
-    return Output(isLoadingObservable: self.isLoadingSubject.asObservable(),
-                  keywordsObservable: self.keywordSubject.asObservable())
+    self.input = Input(viewWillAppearObservable: viewWillAppearSubject.asObserver())
+    self.output = Output(isLoadingObservable: isLoadingSubject.asObservable(),
+                         keywordsObservable: keywordSubject.asObservable(),
+                         noDataObservable: noDataSubject.asObservable())
   }
 }

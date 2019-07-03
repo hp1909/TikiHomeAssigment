@@ -13,21 +13,23 @@ import RxCocoa
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   @IBOutlet weak var keywordCollectionView: UICollectionView!
   @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var noDataLabel: UILabel!
   
   var keywords: [Keyword]? = nil
   var viewModel: ViewModel?
   let disposeBag = DisposeBag()
   
   private let viewWillAppearSubject = PublishSubject<Void>()
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    self.viewWillAppearSubject.onNext(Void())
-  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.setupAccessibilityLabel()
     self.bindViewModel()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    self.viewWillAppearSubject.onNext(Void())
   }
   
   func viewWillAppearObservable() -> Observable<Void> {
@@ -35,26 +37,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
   }
   
   func bindViewModel() {
-    let input = ViewModel.Input(viewWillAppearObservable: self.viewWillAppearObservable())
-    let output = self.viewModel?.transform(input: input)
-    output?.isLoadingObservable
+    guard let viewModel = self.viewModel else {
+      return
+    }
+    self.viewWillAppearSubject.bind(to: viewModel.input.viewWillAppearObservable).disposed(by: self.disposeBag)
+    
+    viewModel.output.isLoadingObservable
       .map { !$0 }
       .bind(to: self.loadingIndicator.rx.isHidden)
       .disposed(by: self.disposeBag)
-    
-    output?.isLoadingObservable
+
+    viewModel.output.isLoadingObservable
       .bind(to: self.loadingIndicator.rx.isAnimating)
       .disposed(by: self.disposeBag)
     
-    output?.keywordsObservable.subscribe(onNext: { [weak self] data in
+    viewModel.output.noDataObservable
+      .map { !$0 }
+      .bind(to: self.noDataLabel.rx.isHidden)
+      .disposed(by: self.disposeBag)
+    
+    viewModel.output.noDataObservable
+      .bind(to: self.keywordCollectionView.rx.isHidden)
+      .disposed(by: self.disposeBag)
+
+    self.viewModel?.output.keywordsObservable.subscribe(onNext: { [weak self] data in
       guard let `self` = self else {
         return
       }
-      
+
       self.keywords = data
       self.keywordCollectionView.reloadData()
     })
     .disposed(by: self.disposeBag)
+  }
+  
+  func setupAccessibilityLabel() {
+    self.keywordCollectionView.accessibilityLabel = "keywordCollectionView"
   }
   
   // MARK: Setup Keywords Collection View
