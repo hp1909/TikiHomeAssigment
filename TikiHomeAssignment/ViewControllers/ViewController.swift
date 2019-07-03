@@ -27,8 +27,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     self.bindViewModel()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     self.viewWillAppearSubject.onNext(Void())
   }
   
